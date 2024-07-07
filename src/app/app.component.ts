@@ -36,6 +36,11 @@ export class AppComponent {
     return word.charAt(0).toUpperCase() + word.slice(1);
   }
 
+  clear() {
+    this.transformedText = '';
+    this.inputText = '';
+  }
+
   copyToClipboard(): void {
     navigator.clipboard
       .writeText(this.transformedText)
